@@ -5,7 +5,7 @@ converts number from 0-15 to hexidecimal value
 */
 
 
-var hex = function(num)
+function hex(num)
 {
 	if (num >15){
 		return null
@@ -25,7 +25,7 @@ converts larger numbers to hexidecimal using above function
 
 */
 
-var numToHex = function(num)
+function numToHex(num)
 {
 	var rem = [];
 

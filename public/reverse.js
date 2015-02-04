@@ -3,7 +3,18 @@
   It should return a string with the parameter's contents, reversed.
   Note: No using string.reverse() or array.reverse(), that's cheating :)
 */
-var reverseWord = function(word) {
+
+function reverseWord(word) {
+
+	var result = [];
+	var arr = word.split("");
+
+	for( var i = 0 ; i < word.length ; i++ )
+	{
+		result.push(arr.pop());
+	}
+
+	return result.join("");
 
 }
 
@@ -16,5 +27,14 @@ var reverseWord = function(word) {
   - Return a string that contains each reversed word, in order
 */
 var reverseSentence = function(sentence) {
+
+	var words = sentence.split(" ");
+
+	for ( var i = 0 ; i < words.length; )
+	{
+		words[i] = reverseWord(words[i]);
+	}
+
+	return words.join(" ");
 
 }
